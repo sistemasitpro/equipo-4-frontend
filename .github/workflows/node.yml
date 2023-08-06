@@ -3,7 +3,7 @@ name: Angular  Development server
 on:
   push:
     branches:
-    - frontend-cicd
+    - develop
 jobs:
   build:
     # using Ubuntu
