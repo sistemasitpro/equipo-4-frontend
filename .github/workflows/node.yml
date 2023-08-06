@@ -30,7 +30,7 @@ jobs:
           HOST:  149.50.130.222
           USERNAME:  root
           PORT:  5640
-          PASSWORD: mK6ZruBjUKAt
+          PASSWORD: "mK6ZruBjUKAt"
         with:
           source: "./dist"
           target: "/srv/DEVATHON/PREPROD/equipo-4-frontend/"
