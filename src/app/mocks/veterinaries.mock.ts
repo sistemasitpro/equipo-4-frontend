@@ -1,4 +1,4 @@
-import { Veterinary } from '../interfaces/veterinary.interface';
+import { Veterinary } from '../interfaces/veterinary.interface'
 
 export const VETERINARIES: Veterinary[] = [
   {
@@ -8,22 +8,26 @@ export const VETERINARIES: Veterinary[] = [
     phone: '1234567890',
     email: 'correo@email.com',
     image: 'https://picsum.photos/200/300',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
     services: [
       {
         id: 1,
         name: 'Servicio 1',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
+        description:
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
       },
       {
         id: 2,
         name: 'Servicio 2',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
+        description:
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
       },
       {
         id: 3,
         name: 'Servicio 3',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
+        description:
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
       },
     ],
   },
@@ -34,22 +38,26 @@ export const VETERINARIES: Veterinary[] = [
     phone: '1234567890',
     email: 'email@email.com',
     image: 'https://picsum.photos/200/300',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
     services: [
       {
         id: 1,
         name: 'Servicio 1',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
+        description:
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
       },
       {
         id: 2,
         name: 'Servicio 2',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
+        description:
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
       },
       {
         id: 3,
         name: 'Servicio 3',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
+        description:
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
       },
     ],
   },
@@ -60,19 +68,22 @@ export const VETERINARIES: Veterinary[] = [
     phone: '1234567890',
     email: 'hola123@gggg.com',
     image: 'https://picsum.photos/200/300',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
     services: [
       {
         id: 1,
         name: 'Servicio 1',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
+        description:
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
       },
       {
         id: 2,
         name: 'Servicio 2',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
+        description:
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
       },
-      ],
+    ],
   },
   {
     id: 4,
@@ -81,12 +92,14 @@ export const VETERINARIES: Veterinary[] = [
     phone: '1234567890',
     email: 'aaaa@bbbb.org',
     image: 'https://picsum.photos/200/300',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
     services: [
       {
         id: 1,
         name: 'Servicio 1',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
+        description:
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
       },
     ],
   },
@@ -97,17 +110,20 @@ export const VETERINARIES: Veterinary[] = [
     phone: '1234567890',
     email: 'bbb@cccc.cl',
     image: 'https://picsum.photos/200/300',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
     services: [
       {
         id: 1,
         name: 'Servicio 1',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
+        description:
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
       },
       {
         id: 2,
         name: 'Servicio 2',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
+        description:
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
       },
     ],
   },
@@ -118,27 +134,32 @@ export const VETERINARIES: Veterinary[] = [
     phone: '1234567890',
     email: 'ssssss@ccccc.net',
     image: 'https://picsum.photos/200/300',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
     services: [
       {
         id: 1,
         name: 'Servicio 1',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
+        description:
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
       },
       {
         id: 2,
         name: 'Servicio 2',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
+        description:
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
       },
       {
         id: 3,
         name: 'Servicio 3',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
+        description:
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
       },
       {
         id: 3,
         name: 'Servicio 4',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
+        description:
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
       },
     ],
   },
@@ -149,13 +170,15 @@ export const VETERINARIES: Veterinary[] = [
     phone: '1234567890',
     email: 'fffffasda@asdada.es',
     image: 'https://picsum.photos/200/300',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
     services: [
       {
         id: 3,
         name: 'Servicio 3',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
+        description:
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
       },
     ],
-  }
-];
+  },
+]
