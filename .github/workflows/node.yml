@@ -25,11 +25,11 @@ jobs:
       - run: npm install -g @angular/cli > /dev/null
       - run: ng build
       - name: copy file via ssh key
-        uses: appleboy/scp-action@master
+        uses: appleboy/scp-action@v0.1.4
         env:
-          HOST:  149.50.130.222
-          USERNAME:  root
-          PORT:  5640
+          HOST: 149.50.130.222
+          USERNAME: root
+          PORT: 5640
           PASSWORD: "mK6ZruBjUKAt"
         with:
           source: "./dist"
