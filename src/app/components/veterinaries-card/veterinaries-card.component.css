@@ -1,0 +1,72 @@
+.veterinaries-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  border-radius: 4px;
+  flex-grow: 1;
+}
+
+.veterinaries-card {
+  min-height: 230px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  padding: 20px;
+  flex: 0 0 calc(33.33% - 20px);
+  max-width: calc(33.33% - 20px);
+}
+
+.veterinaries-card-header .veterinaries-card-header__name {
+  color: #000;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.veterinaries-card-header__name h3,
+.veterinaries-card-header__address p {
+  margin: 0;
+  padding: 0;
+}
+
+.veterinaries-card-header .veterinaries-card-header__address {
+  color: #737373;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.veterinaries-card-description {
+  color: #444;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 30px;
+}
+
+.veterinaries-card-body-services__list {
+  margin-top: 30px;
+}
+
+.veterinaries-card-body-services__list span:last-child {
+  margin-right: 0;
+}
+
+.veterinaries-card-body-services__list span {
+  color: #fff;
+  margin-right: 6px;
+  padding: 3px 10px;
+  border-radius: 4px;
+  background: rgba(13, 131, 240, 0.5);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.mat-mdc-paginator{
+  font-family: Poppins, sans-serif;
+  font-size: 16px;
+  background-color: transparent;
+}
