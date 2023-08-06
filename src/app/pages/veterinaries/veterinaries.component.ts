@@ -1,12 +1,13 @@
 import { Component } from '@angular/core'
 import { Veterinary } from 'src/app/interfaces/veterinary.interface'
 import { VETERINARIES } from 'src/app/mocks/veterinaries.mock'
+
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css'],
+  selector: 'app-veterinaries',
+  templateUrl: './veterinaries.component.html',
+  styleUrls: ['./veterinaries.component.css'],
 })
-export class HomeComponent {
+export class VeterinariesComponent {
   veterinaries: Veterinary[] = VETERINARIES
-  showPaginator = false
+  showPaginator = true
 }

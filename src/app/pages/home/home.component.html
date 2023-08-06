@@ -1,1 +1,13 @@
-<p>home works!</p>
+<div class="container">
+  <div class="header mt-5">
+    <h2>!Bienvenido!</h2>
+    <div class="ver-mas">
+      <a routerLink="/veterinarias">Ver más</a>
+      <span class="material-symbols-outlined"> arrow_forward </span>
+    </div>
+  </div>
+  <veterinaries-card
+    [veterinaries]="veterinaries"
+    [showPaginator]="showPaginator"
+  ></veterinaries-card>
+</div>

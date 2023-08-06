@@ -1,14 +1,13 @@
-/* eslint-disable prettier/prettier */
 import { TestBed } from '@angular/core/testing'
 
-import { LoginService } from './login.service'
+import { RegisterService } from './register.service'
 
-describe('LoginService', () => {
-  let service: LoginService
+describe('RegisterService', () => {
+  let service: RegisterService
 
   beforeEach(() => {
     TestBed.configureTestingModule({})
-    service = TestBed.inject(LoginService)
+    service = TestBed.inject(RegisterService)
   })
 
   it('should be created', () => {

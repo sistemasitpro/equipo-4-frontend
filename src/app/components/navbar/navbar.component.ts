@@ -1,8 +1,16 @@
+/* eslint-disable prettier/prettier */
 import { Component } from '@angular/core'
 
 @Component({
-  selector: 'app-navbar',
+  selector: 'navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css'],
 })
-export class NavbarComponent {}
+export class NavbarComponent {
+  activeRouter = false;
+
+
+  clickEvent(): void {
+    this.activeRouter = !this.activeRouter;
+  }
+}
