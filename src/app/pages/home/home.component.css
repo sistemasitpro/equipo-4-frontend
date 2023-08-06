@@ -26,3 +26,18 @@ h2 {
   text-decoration: none;
   color: #4b72c2;
 }
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  padding: 20px;
+}
+
+app-footer {
+  flex-shrink: 0;
+}
+
