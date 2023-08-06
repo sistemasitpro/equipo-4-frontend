@@ -19,6 +19,7 @@ import { RegisterComponent } from './pages/register/register.component';
 import { ButtonCustomerAreaComponent } from './components/button-customer-area/button-customer-area.component';
 import { VeterinariesCardComponent } from './components/veterinaries-card/veterinaries-card.component';
 import { VeterinariesComponent } from './pages/veterinaries/veterinaries.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { VeterinariesComponent } from './pages/veterinaries/veterinaries.compone
     ButtonCustomerAreaComponent,
     VeterinariesCardComponent,
     VeterinariesComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

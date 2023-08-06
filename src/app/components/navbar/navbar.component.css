@@ -14,6 +14,7 @@
 .nav-links li {
   height: 100px;
   padding: 38px;
+  cursor: pointer;
 }
 
 .nav-links li:last-child {
@@ -30,7 +31,6 @@
   font-size: 18px;
   color: #444;
   font-weight: 400;
-  cursor: pointer;
 }
 
 .nav-links li a:hover {

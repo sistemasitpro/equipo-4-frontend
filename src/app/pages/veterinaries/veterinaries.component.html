@@ -1,4 +1,11 @@
-<div class="container">
-  <h2 class="mt-5">Todas las veterinarias</h2>
-  <veterinaries-card [veterinaries]="veterinaries" [showPaginator]="showPaginator"></veterinaries-card>
+<div class="main-content">
+  <div class="container flex-grow-1">
+    <h2 class="mt-5">Todas las veterinarias</h2>
+    <veterinaries-card
+      [veterinaries]="veterinaries"
+      [showPaginator]="showPaginator"
+    ></veterinaries-card>
+  </div>
+  <!-- Footer fuera del contenedor -->
+  <app-footer></app-footer>
 </div>
