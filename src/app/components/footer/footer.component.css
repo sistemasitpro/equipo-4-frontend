@@ -12,6 +12,11 @@ footer p {
   margin: 0;
 }
 
+footer p a{
+  color: #fff;
+  text-decoration: none;
+}
+
 footer .title {
   color: #F4F7F9;
   font-size: 32px;
