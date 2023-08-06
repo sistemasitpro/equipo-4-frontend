@@ -4,7 +4,6 @@ on:
   push:
     branches:
     - frontend-cicd
-
 jobs:
   build:
     # using Ubuntu
