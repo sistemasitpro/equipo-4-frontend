@@ -1,0 +1,20 @@
+.container-header {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(160, 217, 255, 0.5);
+}
+
+.container-logo-menu {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.container-logo-menu a {
+  color: #333;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: normal;
+}
