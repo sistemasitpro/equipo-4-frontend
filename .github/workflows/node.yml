@@ -27,10 +27,10 @@ jobs:
       - name: copy file via ssh key
         uses: appleboy/scp-action@v0.1.4
         env:
-        HOST: ${{ secrets.HOST }}
-        USERNAME: ${{ secrets.USERNAME }}
-        PORT: ${{ secrets.PORT }}
-        PASSWORD: ${{ secrets.PASSWORD }}
+          HOST: ${{ secrets.HOST }}
+          USERNAME: ${{ secrets.USERNAME }}
+          PORT: ${{ secrets.PORT }}
+          PASSWORD: ${{ secrets.PASSWORD }}
         with:
           source: "./dist/equipo-4-frontend/*"
           target: "/srv/DEVATHON/PREPROD/equipo-4-frontend/dist"
