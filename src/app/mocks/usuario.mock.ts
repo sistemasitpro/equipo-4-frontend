@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { Usuario } from '../interfaces/login.interface'
 
 export const USUARIO_MOCK: Usuario = {

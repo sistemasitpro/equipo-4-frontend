@@ -1,0 +1,48 @@
+<div class="veterinaries-card-container">
+  <div
+    class="veterinaries-card"
+    *ngFor="let veterinary of getDisplayedVeterinaries()"
+  >
+    <div class="veterinaries-card-header">
+      <div class="veterinaries-card-header__name">
+        <h3>{{ veterinary.name }}</h3>
+      </div>
+      <div class="veterinaries-card-header__address">
+        <p>{{ veterinary.address }}</p>
+      </div>
+    </div>
+    <div class="veterinaries-card-description">
+      <p>{{ veterinary.description }}</p>
+    </div>
+    <div class="veterinaries-card-body-services">
+      <div class="veterinaries-card-body-services__list">
+        <ng-container
+          *ngIf="veterinary.services.length <= maxServicesToShow; else showMore"
+        >
+          <span *ngFor="let service of veterinary.services">
+            {{ service.name }}
+          </span>
+        </ng-container>
+        <ng-template #showMore>
+          <span
+            *ngFor="
+              let service of veterinary.services.slice(0, maxServicesToShow)
+            "
+          >
+            {{ service.name }}
+          </span>
+          <span *ngIf="veterinary.services.length > maxServicesToShow"
+            >...</span
+          >
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</div>
+<div *ngIf="showPaginator">
+  <mat-paginator
+    [length]="veterinaries.length"
+    [pageSize]="pageSize"
+    (page)="onPageChange($event)"
+  ></mat-paginator>
+</div>

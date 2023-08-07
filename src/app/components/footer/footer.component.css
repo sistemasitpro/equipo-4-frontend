@@ -1,0 +1,43 @@
+footer {
+  color: #fff;
+  background: #202020;
+  height: 240px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer p a{
+  color: #fff;
+  text-decoration: none;
+}
+
+footer .title {
+  color: #F4F7F9;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: normal;
+}
+
+footer .contact {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.politicas-info-legal {
+  display: flex;
+}
+
+.politicas-info-legal span {
+  width: 2px;
+  height: 20px;
+  background: #F4F7F9;
+  margin: 0 10px;
+}
