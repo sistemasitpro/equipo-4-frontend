@@ -12,7 +12,9 @@ import { AppComponent } from './app.component'
 import { HomeComponent } from './pages/home/home.component'
 import { LoginComponent } from './pages/login/login.component'
 import { HeaderComponent } from './components/header/header.component'
-import { NavbarComponent } from './components/navbar/navbar.component'
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { LoginAndRegisterComponent } from './pages/login-and-register/login-and-register.component';
+import { RegisterComponent } from './pages/register/register.component'
 import { HttpClientModule } from '@angular/common/http'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegisterComponent } from './pages/register/register.component';
@@ -43,6 +45,8 @@ import { FooterComponent } from './components/footer/footer.component';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     MatPaginatorModule,
+    LoginAndRegisterComponent,
+    RegisterComponent,
   ],
   providers: [],
   bootstrap: [AppComponent],

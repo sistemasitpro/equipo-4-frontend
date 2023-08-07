@@ -1,0 +1,21 @@
+<div class="container-login">
+
+    <div class="container-img-pet ">
+      <img class="img-pet" src="../../../assets/Img/d83e9cc054f69e9f1c1638d681d76656.png" alt="ImgPet"/>
+    </div>
+  
+    <div class="container-form">
+      <div class="container-widget">
+        <h1 class="title-login ">Bienvenido a CareYoursPets</h1>
+        <p class="">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet qui numquam fuga repellat nemo, error, debitis vero sint voluptas mollitia ducimus vel quas minima magnam vitae magni odit nulla rerum.</p>
+
+        <button (click)="mostrarLogin()">Mostrar Login</button>
+        <button (click)="mostrarRegistroComponente()">Mostrar Registro</button>
+        
+        <app-login *ngIf="!mostrarRegistro"></app-login>
+        <app-register *ngIf="mostrarRegistro"></app-register>
+      
+      </div>
+    </div>
+</div>
+  

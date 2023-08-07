@@ -1,50 +1,35 @@
-<div class="container-login text-center">
-  <main class="form-signin">
-    <form [formGroup]="miFormValidado" (submit)="enviarFormulario()">
-      <img
-        class="mb-4"
-        src="https://getbootstrap.com/docs/5.0/assets/brand/bootstrap-logo.svg"
-        alt=""
-        width="72"
-        height="57"
-      />
-      <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
 
-      <div class="form-floating">
-        <input
-          type="email"
-          class="form-control"
-          id="floatingInput"
-          placeholder="name@example.com"
-          formControlName="email"
-        />
-        <label for="floatingInput">Email address</label>
-        <div *ngIf="emailForm?.errors?.['pattern'] && emailForm?.touched">
-          <p>El formato de Email no es valido</p>
-        </div>
-      </div>
-      <div class="form-floating">
-        <input
-          type="password"
-          class="form-control"
-          id="floatingPassword"
-          placeholder="Password"
-          formControlName="password"
-        />
-        <label for="floatingPassword">Password</label>
-        <div *ngIf="passwordForm?.errors?.['pattern'] && passwordForm?.touched">
-          <p>El formato no es valido</p>
-        </div>
-      </div>
+<form>
+ <div class="">
+    <input
+      type="email"
+      class="form-control"
+      id="floatingInput"
+      placeholder="Correo Electronico"
+      
+    />
+    <label for="">Email address</label>
+  </div>
+  <div class="">
+    <input
+      type="password"
+      class="form-control"
+      id="floatingPassword"
+      placeholder="Contraseña "
+    />
+    <label for="floatingPassword">Password</label>
+  </div>
 
+  <div class="">
+    <label>
+      <input type="checkbox" value="remember-me" /> Guarda mis Datos 
+    </label>
+  </div>
+  <button class="" type="submit">
+    Entrar
+  </button>
+</form>
 
-      <button
-        class="w-100 btn btn-lg btn-primary"
-        type="submit"
-        [disabled]="miFormValidado.invalid">
-        Sign in
-      </button>
-      <p class="mt-5 mb-3 text-muted">© 2017–2021</p>
-    </form>
-  </main>
-</div>
+ <p>
+  <a href="/">Recuperar contraseña</a>
+</p>

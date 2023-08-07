@@ -1,107 +1,71 @@
-<div class="container-login text-center">
-  <main class="form-signin">
-    <form [formGroup]="miFormValidado" (submit)="enviarFormulario()">
-      <img
-        class="mb-4"
-        src="https://getbootstrap.com/docs/5.0/assets/brand/bootstrap-logo.svg"
-        alt=""
-        width="72"
-        height="57"
+<form>
+    <div class="">
+      <input
+        type="text"
+        class="form-control"
+        id="floatingInput"
+        placeholder="Nombre Completo"
       />
-      <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
-      <!-- nombre -->
-      <div class="form-floating">
+    </div>
+    <div class="">
+      <input
+        type="email"
+        class="form-control"
+        id="floatingPassword"
+        placeholder="Correo Electronico"
+      />
+    </div>
+  
+    <div class="">
+        <select>
+            <option value="opcion1">Provincias</option>
+            <option value="opcion2">Opción 1</option>
+            <option value="opcion3">Opción 2</option>
+            <option value="opcion3">Opción 3</option>
+        </select>
+    </div>
+
+    <div class="">
+        <select>
+            <option value="opcion1">Ciudades</option>
+            <option value="opcion2">Opción 1</option>
+            <option value="opcion3">Opción 2</option>
+            <option value="opcion3">Opción 3</option>
+        </select>
+    </div>
+    <div class="">
         <input
           type="text"
           class="form-control"
-          id="floatingInput"
-          placeholder="Enter your name"
-          formControlName="name"
+          id="address"
+          placeholder="Direccion"
         />
-        <label for="floatingInput">Name</label>
-        <div *ngIf="nameForm?.errors?.['pattern'] && nameForm?.touched">
-          <p>The name format is not valid</p>
-        </div>
       </div>
-      <!-- email -->
-      <div class="form-floating">
+      <div class="">
         <input
-          type="email"
+          type="tel"
           class="form-control"
-          id="floatingInput"
-          placeholder="name@example.com"
-          formControlName="email"
+          id="tel"
+          placeholder="Telefono"
         />
-        <label for="floatingInput">Email address</label>
-        <div *ngIf="emailForm?.errors?.['pattern'] && emailForm?.touched">
-          <p>The email format is not valid</p>
-        </div>
       </div>
-      <!-- adress -->
-      <div class="form-floating">
+      <div class="">
         <input
-          type="text"
+          type="tel"
           class="form-control"
-          id="floatingInput"
-          placeholder="Enter your Adress"
-          formControlName="adress"
+          id="password"
+          placeholder="Contraseña"
         />
-        <label for="floatingInput">Address</label>
-        <div *ngIf="addressForm?.errors?.['pattern'] && addressForm?.touched">
-          <p>The adress format is not valid</p>
-        </div>
       </div>
-      <!-- phone -->
-      <div class="form-floating">
+      <div class="">
         <input
-          type="number"
+          type="tel"
           class="form-control"
-          id="floatingInput"
-          placeholder="Enter your phone"
-          formControlName="phone"
+          id="password"
+          placeholder="Confirmacion de Contraseña"
         />
-        <label for="floatingInput">Phone</label>
-        <div *ngIf="phoneForm?.errors?.['pattern'] && phoneForm?.touched">
-          <p>The adress format is not valid</p>
-        </div>
       </div>
-      <!-- password -->
-      <div class="form-floating">
-        <input
-          type="password"
-          class="form-control"
-          id="floatingPassword"
-          placeholder="Password"
-          formControlName="password"
-        />
-        <label for="floatingPassword">Password</label>
-        <div *ngIf="passwordForm?.errors?.['pattern'] && passwordForm?.touched">
-          <p>The password format is not valid</p>
-        </div>
-      </div>
-      <!-- confirmPassword -->
-      <div class="form-floating">
-        <input
-          type="password"
-          class="form-control"
-          id="floatingPassword"
-          placeholder="Password"
-          formControlName="confirmPassword"
-        />
-        <label for="floatingPassword">Confirm Password</label>
-        <div *ngIf="confirmPasswordForm?.errors?.['pattern'] && confirmPasswordForm?.touched">
-          <p>The password format is not valid</p>
-        </div>
-      </div>
-
-
-      <button
-        class="w-100 btn btn-lg btn-primary"
-        type="submit"
-        [disabled]="miFormValidado.invalid">
-        Sign in
-      </button>
-      <p class="mt-5 mb-3 text-muted">© 2017–2021</p>
-    </form>
-  </main>
-</div>
+    <button class="" type="submit">
+      Entrar
+    </button>
+  </form>
