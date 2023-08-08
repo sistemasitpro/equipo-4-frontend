@@ -35,6 +35,5 @@ jobs:
           source: "./dist/equipo-4-frontend/*"
           target: "/srv/DEVATHON/PREPROD/equipo-4-frontend/dist"
           strip_components: 2
-      - name: Restart Docker container
-        run: docker restart pre-frontend-app
-        shell: bash
+          script: |
+      docker restart pre-frontend-app
