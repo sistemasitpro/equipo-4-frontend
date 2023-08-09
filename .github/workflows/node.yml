@@ -35,5 +35,11 @@ jobs:
           source: "./dist/equipo-4-frontend/*"
           target: "/srv/DEVATHON/PREPROD/equipo-4-frontend/dist"
           strip_components: 2
-          script: |
-            docker restart pre-frontend-app
+      - name: Execute command to restart docker container for apply changes
+        uses: appleboy/ssh-action@v1.0.0
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          port: ${{ secrets.PORT }}
+          script: docker restart pre-frontend-app
