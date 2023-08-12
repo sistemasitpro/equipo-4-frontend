@@ -1,0 +1,11 @@
+{
+  "/api": {
+    "target": "https://pre.api-nest.careyourspets.duckdns.org",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/api": ""
+    }
+  }
+}

@@ -1,0 +1,62 @@
+/* Estilos para el menú desplegable */
+.perfil-menu {
+  position: relative;
+  display: inline-block;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 8px;
+  background-color: #fff;
+}
+
+.perfil-icon {
+  font-size: 24px;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.perfil-menu-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  width: max-content; /* Ajustar el ancho al contenido */
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  padding: 16px;
+  margin-top: 9px;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease-in-out,
+    visibility 0s linear 0.3s;
+  right: 0; /* Posicionar a la derecha */
+  white-space: nowrap; /* Evitar saltos de línea */
+}
+
+.perfil-menu:hover .perfil-menu-content {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0s;
+}
+
+.perfil-menu-content h3 {
+  margin-bottom: 10px;
+}
+
+.perfil-menu-content a {
+  color: #333;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 8px;
+  transition: background-color 0.3s ease-in-out;
+  padding: 8px;
+}
+
+.perfil-menu-content a:hover {
+  background-color: #ddd;
+}
+
+.perfil-menu-content .logout {
+  color: #f44336;
+}
