@@ -6,5 +6,6 @@
     </div>
     <navbar></navbar>
   </div>
-  <button-customer-area></button-customer-area>
+  <button-customer-area *ngIf="!sessionOn"></button-customer-area>
+  <app-profile-menu *ngIf="sessionOn"></app-profile-menu>
 </div>
