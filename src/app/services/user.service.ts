@@ -2,6 +2,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from './../../environments/environment';
 import { CreateUserResp, CreateUserRq, LoginResp, LoginRq } from '../interfaces/user.interface'
 
 @Injectable({
@@ -17,7 +18,8 @@ export class UserService {
       email: loginRq.email,
       password: loginRq.password,
     };
-    const url = '/api/user/signin';
+    const url = `${environment.apiUrl}/user/signin`;
+    // const urlLocal = '/api/user/signin';
 
     return this.http.post<LoginResp>(url, body);
   }
@@ -31,7 +33,9 @@ export class UserService {
       password: creatUserRq.password,
       city_id: creatUserRq.city_id,
     };
-    const url = '/api/user';
+
+    const url = `${environment.apiUrl}/user`;
+    // const urlLocal = '/api/user';
 
     return this.http.post<CreateUserResp>(url, body);
   }
