@@ -33,7 +33,7 @@ jobs:
           PASSWORD: ${{ secrets.PASSWORD }}
         with:
           source: "./dist/equipo-4-frontend/*"
-          target: "/srv/DEVATHON/PREPROD/equipo-4-frontend/dist"
+          target: "/srv/DEVATHON/datos-recursos/data/pre-frontend-app/dist"
           strip_components: 2
       - name: Execute command to restart docker container for apply changes
         uses: appleboy/ssh-action@v1.0.0
