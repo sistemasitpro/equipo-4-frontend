@@ -3,8 +3,8 @@ name: Angular Build Deploy Server
 on:
   push:
     branches:
-    #- feature/CICD
-    - develop
+    - feature/CICD
+    #- develop
 jobs:
   build:
     # using Ubuntu

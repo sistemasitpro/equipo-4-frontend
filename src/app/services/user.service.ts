@@ -18,7 +18,7 @@ export class UserService {
       email: loginRq.email,
       password: loginRq.password,
     };
-    const url = `${environment.apiUrl}/user/signin`;
+    const url = `${environment.apiUrl}/auth/signin`;
     // const urlLocal = '/api/user/signin';
 
     return this.http.post<LoginResp>(url, body);
