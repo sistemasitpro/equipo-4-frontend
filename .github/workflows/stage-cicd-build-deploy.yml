@@ -3,8 +3,8 @@ name: Angular Build Deploy Server
 on:
   push:
     branches:
-    - feature/CICD
-    #- develop
+    #- feature/CICD
+    - develop
 jobs:
   build:
     # using Ubuntu
@@ -25,10 +25,6 @@ jobs:
       - run: npm install
       - run: npm install -g @angular/cli > /dev/null
       - run: ng build
-      - name: Checking List . compiling Files
-        run: ls -ltrah .
-      - name: Checking List dist compiling Files
-        run: ls -ltrah dist
       - name: Login to Docker Hub
         uses: docker/login-action@v1
         with:
