@@ -2,8 +2,9 @@
 import { Component, OnInit } from '@angular/core'
 import { FormGroup, FormBuilder, Validators } from '@angular/forms'
 import { Router } from '@angular/router'
-import { LoginResp } from 'src/app/interfaces/user.interface'
-import { UserService } from 'src/app/services/user.service'
+import { LoginResp } from '../../interfaces/user.interface'
+import { AuthService } from '../../services/auth.service'
+import { UserService } from '../../services/user.service'
 
 @Component({
   selector: 'app-login',
@@ -16,8 +17,10 @@ export class LoginComponent implements OnInit {
   constructor(
     private router: Router,
     private userService: UserService,
-    private formBuilder: FormBuilder, // eslint-disable-next-line no-empty-function
-  ) {}
+    private formBuilder: FormBuilder,
+    private authService: AuthService,
+  ) // eslint-disable-next-line no-empty-function
+  {}
 
   ngOnInit(): void {
     this.loginForm = this.formBuilder.group({
@@ -37,18 +40,32 @@ export class LoginComponent implements OnInit {
       const formData = this.loginForm.value
       const observer = {
         next: (response: LoginResp) => {
-          sessionStorage.setItem('token', response.accessToken)
+          const res = {
+            accessToken: response.accessToken,
+            uuid: response.uuid,
+            name: response.name,
+            refreshToken: response.refreshToken,
+          }
+
+          this.authService.login(
+            res.accessToken,
+            res.uuid,
+            res.name,
+            res.refreshToken,
+          )
+          console.log('Logged in:', response)
           this.router.navigate(['/inicio'])
-          console.log(response);
+          console.log(response)
         },
         error: (error: Error) => {
           console.log(error)
         },
         complete: () => {
           console.log('complete')
+          
         },
       }
-      console.log(formData);
+      console.log(formData)
       this.userService.signIn(formData).subscribe(observer)
     }
   }

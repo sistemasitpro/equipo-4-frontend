@@ -6,6 +6,9 @@ export interface LoginRq {
 
 export interface LoginResp {
   accessToken: string
+  refreshToken: string
+  name: string
+  uuid: string
 }
 
 export interface CreateUserRq {

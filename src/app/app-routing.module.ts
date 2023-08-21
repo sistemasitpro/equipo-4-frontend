@@ -7,7 +7,7 @@ import { VeterinariesComponent } from './pages/veterinaries/veterinaries.compone
 
 const routes: Routes = [
   { path: 'inicio', component: HomeComponent },
-  { path: 'sign-in-up', component: LoginAndRegisterComponent },
+  { path: 'ingresar', component: LoginAndRegisterComponent },
   { path: 'veterinarias', component: VeterinariesComponent },
   { path: '', redirectTo: '/inicio', pathMatch: 'full' },
   { path: '**', pathMatch: 'full', redirectTo: '/inicio' },

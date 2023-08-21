@@ -1,6 +1,7 @@
 /* eslint-disable prettier/prettier */
 import { Component } from '@angular/core'
-import { Router } from '@angular/router'
+import { AuthService } from '../../services/auth.service'
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login-and-register',
@@ -9,14 +10,21 @@ import { Router } from '@angular/router'
 })
 export class LoginAndRegisterComponent {
   mostrarRegistro: boolean = false
+  isAuthenticated!: boolean
 
   constructor(
+    private authService: AuthService,
     private router: Router,
-  ) {
-    const token = sessionStorage.getItem('token')
-    if (token) {
-      this.router.navigate(['/inicio'])
-    }
+    ) {
+    this.authService.isAuthenticated$.subscribe(isAuthenticated => {
+      this.isAuthenticated = isAuthenticated;
+      if (!isAuthenticated) {
+        this.router.navigate(['/ingresar']);
+      } else {
+        this.router.navigate(['/inicio']);
+        console.log('Logged in', this.isAuthenticated);
+      }
+    });
   }
 
   mostrarLogin() {

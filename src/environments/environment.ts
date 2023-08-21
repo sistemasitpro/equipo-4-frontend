@@ -2,5 +2,5 @@
 // environment.ts
 export const environment = {
   production: false,
-  apiUrl: 'https://pre.api-nest.careyourspets.duckdns.org',
+  apiUrl: 'http://127.0.0.1:3000/v1',
 }

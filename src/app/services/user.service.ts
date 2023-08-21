@@ -18,10 +18,16 @@ export class UserService {
       email: loginRq.email,
       password: loginRq.password,
     };
-    const url = `${environment.apiUrl}/user/signin`;
-    // const urlLocal = '/api/user/signin';
+    const url = `${environment.apiUrl}/auth/signin`;
 
     return this.http.post<LoginResp>(url, body);
+  }
+
+  refreshAccessToken(refreshToken: string): Observable<unknown> {
+    const url = `${environment.apiUrl}/auth/refresh`;
+    const body = { refreshToken };
+  
+    return this.http.post(url, body);
   }
 
   signUp(creatUserRq: CreateUserRq): Observable<CreateUserResp> {
@@ -35,7 +41,6 @@ export class UserService {
     };
 
     const url = `${environment.apiUrl}/user`;
-    // const urlLocal = '/api/user';
 
     return this.http.post<CreateUserResp>(url, body);
   }

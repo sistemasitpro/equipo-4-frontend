@@ -68,6 +68,8 @@ export class RegisterComponent implements OnInit {
   passwordsMatch(control: AbstractControl) {
     const password = control.parent?.get('password')?.value
     const confirmPassword = control.parent?.get('confirmPassword')?.value
+    console.log(password, confirmPassword);
+    console.log('control', control);
     if (password === confirmPassword) {
       return null
     } else {
