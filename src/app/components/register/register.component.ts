@@ -8,6 +8,7 @@ import {
   Validators,
 } from '@angular/forms'
 import { Router } from '@angular/router'
+import { RegistrationErrors } from 'src/app/interfaces/error-response.interface'
 import { City, Province } from 'src/app/interfaces/geographic-data.intereface'
 import { CreateUserResp, CreateUserRq } from 'src/app/interfaces/user.interface'
 import { UserService } from 'src/app/services/user.service'
@@ -19,6 +20,11 @@ import { UserService } from 'src/app/services/user.service'
 })
 export class RegisterComponent implements OnInit {
   registrationForm!: FormGroup
+  hasError!: boolean
+  hasSuccess!: boolean
+  successMessage!: string
+  registrationErrors: RegistrationErrors = {}
+  
   provinces: Province[] = [
     { value: 0, label: 'Provincias' },
     { value: 1, label: 'A Coruña' },
@@ -57,7 +63,7 @@ export class RegisterComponent implements OnInit {
       city_id: [0, Validators.required],
       address: ['', Validators.required],
       phone: ['', Validators.required],
-      password: ['', [Validators.required, this.passwordsMatch.bind(this), Validators.minLength(8)]],
+      password: ['', [Validators.required, Validators.minLength(8)]],
       confirmPassword: [
         '',
         [Validators.required, this.passwordsMatch.bind(this)],
@@ -68,8 +74,7 @@ export class RegisterComponent implements OnInit {
   passwordsMatch(control: AbstractControl) {
     const password = control.parent?.get('password')?.value
     const confirmPassword = control.parent?.get('confirmPassword')?.value
-    console.log(password, confirmPassword);
-    console.log('control', control);
+
     if (password === confirmPassword) {
       return null
     } else {
@@ -91,17 +96,23 @@ export class RegisterComponent implements OnInit {
       const observer = {
         next: (response: CreateUserResp) => {
           console.log(response)
+          this.hasError = false
+          this.hasSuccess = true
+          this.successMessage = response.message
         },
-        error: (error: Error) => {
+        error: (error: any) => {
           console.log(error)
+          this.hasError = true
+          this.registrationErrors = error.error
         },
         complete: () => {
-          console.log('complete')
-          this.router.navigate(['/login'])
+          setTimeout(() => {
+            this.router.navigate(['/login'])
+          }
+          , 2000)
         },
       }
       this.userService.signUp(formData).subscribe(observer)
-      console.log('Formulario de registro enviado:', formData)
     }
   }
 }

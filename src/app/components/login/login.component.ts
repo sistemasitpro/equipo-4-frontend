@@ -5,6 +5,7 @@ import { Router } from '@angular/router'
 import { LoginResp } from '../../interfaces/user.interface'
 import { AuthService } from '../../services/auth.service'
 import { UserService } from '../../services/user.service'
+import { ErrorService } from 'src/app/interfaces/error-response.interface'
 
 @Component({
   selector: 'app-login',
@@ -13,6 +14,9 @@ import { UserService } from '../../services/user.service'
 })
 export class LoginComponent implements OnInit {
   loginForm!: FormGroup
+  hasError!: boolean
+  errorMessage!: string
+  buttonColor!: string;
 
   constructor(
     private router: Router,
@@ -28,13 +32,10 @@ export class LoginComponent implements OnInit {
       password: ['', Validators.required],
       rememberMe: [false],
     })
-
-    const token = sessionStorage.getItem('token')
-    if (token) {
-      this.router.navigate(['/home'])
-    }
   }
 
+
+  
   onSubmit() {
     if (this.loginForm.valid) {
       const formData = this.loginForm.value
@@ -53,16 +54,15 @@ export class LoginComponent implements OnInit {
             res.name,
             res.refreshToken,
           )
-          console.log('Logged in:', response)
           this.router.navigate(['/inicio'])
-          console.log(response)
         },
-        error: (error: Error) => {
+        error: (error: ErrorService) => {
           console.log(error)
+          this.hasError = true
+          this.errorMessage = error.error.message 
         },
         complete: () => {
-          console.log('complete')
-          
+          // ...
         },
       }
       console.log(formData)

@@ -27,11 +27,7 @@ export class LoginAndRegisterComponent {
     });
   }
 
-  mostrarLogin() {
-    this.mostrarRegistro = false
-  }
-
-  mostrarRegistroComponente() {
-    this.mostrarRegistro = true
+  handleForms() {
+    this.mostrarRegistro = !this.mostrarRegistro
   }
 }
