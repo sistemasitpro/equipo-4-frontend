@@ -1,9 +1,8 @@
-name: Angular Build Deploy Server
+name: Angular Dddeveldopment server
 
 on:
   push:
     branches:
-    #- feature/CICD
     - develop
 jobs:
   build:
@@ -36,4 +35,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: careyourspets/equipo-4-frontend:stage-latest
+          tags: careyourspets/equipo-4-backend:frontend-app-ant
