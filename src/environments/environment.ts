@@ -1,13 +1,13 @@
 // environment.ts
 
 export const base = {
-  baseUrl: 'https://pre.api.careyourspets.duckdns.org',
+  baseUrl: 'https://pre.api.lcareyourspets.duckdns.org',
   user: '/nestjs',
   veterinary: '/drf',
 }
 export const environment = {
   production: false,
-  baseUrl: 'https://pre.api.careyourspets.duckdns.org',
+  baseUrl: 'https://pre.api.lcareyourspets.duckdns.org',
 
   ENDPOINTS: {
     USER: {
