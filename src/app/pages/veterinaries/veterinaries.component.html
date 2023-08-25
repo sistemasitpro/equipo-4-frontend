@@ -2,8 +2,9 @@
   <div class="container flex-grow-1">
     <h2 class="mt-5">Todas las veterinarias</h2>
     <veterinaries-card
+      [showSkeleton]="showSkeleton"
       [veterinaries]="veterinaries"
-      [showPaginator]="showPaginator"
+      [showPaginator]="true"
     ></veterinaries-card>
   </div>
   <!-- Footer fuera del contenedor -->

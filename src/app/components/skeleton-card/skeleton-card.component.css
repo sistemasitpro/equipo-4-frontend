@@ -1,0 +1,32 @@
+.skeleton-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.skeleton-container div {
+  min-height: 230px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  width: 406.6px;
+  display: flex;
+  background: linear-gradient(110deg, #f0f0f0 10%, #e0e0e0 25%, #f0f0f0 40%);
+  animation: 0.7s fadeAndShine linear infinite;
+  margin-bottom: 30px;
+  background-color: #fff;
+  opacity: 1;
+}
+
+@keyframes fadeAndShine {
+  0%,
+  20%,
+  100% {
+    opacity: 1;
+    background-position: 200%;
+  }
+  50% {
+    opacity: 0.2;
+    background-position: -200%;
+  }
+}

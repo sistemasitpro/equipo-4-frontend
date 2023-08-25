@@ -13,9 +13,10 @@ export class VeterinariesCardComponent {
   @Input() showPaginator = true
   maxVeterinariesToShow = 2
   maxServicesToShow = 3
-
   pageSize = 6
   pageIndex = 0
+
+  @Input() showSkeleton!: boolean
 
   onPageChange(event: PageEvent) {
     this.pageSize = event.pageSize

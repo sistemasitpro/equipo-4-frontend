@@ -4,8 +4,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // Material Angular
-import { MatPaginatorModule } from '@angular/material/paginator'; // Import the MatPaginatorModule
+import { MatPaginatorModule } from '@angular/material/paginator';
 
+// Hot Toast
+import { HotToastModule } from '@ngneat/hot-toast';
 
 import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
@@ -22,6 +24,10 @@ import { VeterinariesCardComponent } from './components/veterinaries-card/veteri
 import { VeterinariesComponent } from './pages/veterinaries/veterinaries.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ProfileMenuComponent } from './components/profile-menu/profile-menu.component';
+import { RegisterPetComponent } from './pages/register-pet/register-pet.component';
+import { RegisterPetFormComponent } from './components/register-pet-form/register-pet-form.component';
+import { SkeletonCardComponent } from './components/skeleton-card/skeleton-card.component';
+import { MessagesComponent } from './components/messages/messages.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +43,10 @@ import { ProfileMenuComponent } from './components/profile-menu/profile-menu.com
     LoginAndRegisterComponent,
     FooterComponent,
     ProfileMenuComponent,
+    RegisterPetComponent,
+    RegisterPetFormComponent,
+    SkeletonCardComponent,
+    MessagesComponent,
   ],
   imports: [
     BrowserModule,
@@ -47,6 +57,7 @@ import { ProfileMenuComponent } from './components/profile-menu/profile-menu.com
     ReactiveFormsModule,
     BrowserAnimationsModule,
     MatPaginatorModule,
+    HotToastModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent],

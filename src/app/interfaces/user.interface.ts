@@ -4,8 +4,15 @@ export interface LoginRq {
   password: string
 }
 
+export interface LogoutResp {
+  message: string
+}
+
 export interface LoginResp {
   accessToken: string
+  refreshToken: string
+  name: string
+  uuid: string
 }
 
 export interface CreateUserRq {

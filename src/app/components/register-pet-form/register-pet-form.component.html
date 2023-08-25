@@ -1,0 +1,82 @@
+<form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+  <div class="form-group my-3">
+    <label class="fw-bold" for="name">Nombre</label>
+    <input
+      type="text"
+      class="form-control"
+      id="name"
+      placeholder="Nombre"
+      formControlName="name"
+    />
+    <span class="error-message" *ngIf="hasError">
+      {{ registrationErrors.name }}
+    </span>
+  </div>
+  <div class="form-group mb-3">
+    <label class="fw-bold" for="age">Edad</label>
+    <input
+      type="number"
+      class="form-control"
+      id="age"
+      placeholder="Edad"
+      formControlName="age"
+    />
+    <span class="error-message" *ngIf="hasError">
+      {{ registrationErrors.age }}
+    </span>
+  </div>
+  <div class="form-group mb-3">
+    <label class="fw-bold" for="type_pet">Tipo de mascota</label>
+    <input
+      type="text"
+      class="form-control"
+      id="type_pet"
+      placeholder="Tipo de mascota"
+      formControlName="type_pet"
+    />
+    <span class="error-message" *ngIf="hasError">
+      {{ registrationErrors.type_pet }}
+    </span>
+  </div>
+  <div class="form-group mb-3">
+    <label class="fw-bold" for="specie">Raza</label>
+    <input
+      type="text"
+      class="form-control"
+      id="specie"
+      placeholder="Raza"
+      formControlName="specie"
+    />
+    <span class="error-message" *ngIf="hasError">
+      {{ registrationErrors.specie }}
+    </span>
+  </div>
+  <div class="form-group mb-3">
+    <label class="fw-bold" for="preexisting_conditions">Enfermedades preexistentes</label>
+    <input
+      type="text"
+      class="form-control"
+      id="preexisting_conditions"
+      placeholder="Enfermedad preexistente"
+      formControlName="preexisting_conditions"
+    />
+    <span class="error-message" *ngIf="hasError">
+      {{ registrationErrors.preexisting_conditions }}
+    </span>
+  </div>
+  <button
+    type="submit"
+    class="btn mb-3"
+    [class.btn-primary]="registrationForm.valid"
+    [class.disabled-color]="!registrationForm.valid"
+    [disabled]="!registrationForm.valid"
+  >
+    Registrar mascota
+  </button>
+</form>
+
+<div class="sucess-message">
+  <p *ngIf="hasSuccess">
+    {{ successMessage }}
+  </p>
+</div>

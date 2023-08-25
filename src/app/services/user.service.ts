@@ -7,16 +7,16 @@ import {
   CreateUserRq,
   LoginResp,
   LoginRq,
+  LogoutResp,
 } from '../interfaces/user.interface'
+import { PetResp, PetRq } from '../interfaces/pet.interface'
 
 @Injectable({
   providedIn: 'root',
 })
 export class UserService {
   constructor(private http: HttpClient) {
-    if (environment.production) {
-      console.log('Estás en modo de producción')
-    }
+    // ..
   }
 
   signIn(loginRq: LoginRq): Observable<LoginResp> {
@@ -24,22 +24,42 @@ export class UserService {
       email: loginRq.email,
       password: loginRq.password,
     }
-    const url = `${environment.apiUrl}/auth/signin`
+    const url = `${environment.ENDPOINTS.USER.SIGN_IN}`
+
     return this.http.post<LoginResp>(url, body)
   }
 
-  signUp(creatUserRq: CreateUserRq): Observable<CreateUserResp> {
-    const body = {
-      name: creatUserRq.name,
-      email: creatUserRq.email,
-      phone_number: creatUserRq.phone_number,
-      address: creatUserRq.address,
-      password: creatUserRq.password,
-      city_id: creatUserRq.city_id,
-    }
+  refreshAccessToken(refreshToken: string): Observable<unknown> {
+    const url = `${environment.ENDPOINTS.USER.REFRESH_TOKEN}`
+    const body = { refreshToken }
 
-    const url = `${environment.apiUrl}/user`
+    return this.http.post(url, body)
+  }
+
+  signUp(creatUserRq: CreateUserRq): Observable<CreateUserResp> {
+    const body = creatUserRq
+
+    const url = `${environment.ENDPOINTS.USER.SIGN_UP}`
 
     return this.http.post<CreateUserResp>(url, body)
+  }
+
+  logout(token: string): Observable<LogoutResp> {
+    const url = `${environment.ENDPOINTS.USER.LOGOUT}`
+    const headers = {
+      Authorization: `Bearer ${token}`,
+    }
+    return this.http.post<LogoutResp>(url, {}, { headers })
+  }
+
+  createPet(createPet: PetRq, token: string): Observable<PetResp> {
+    const body = createPet
+    const headers = {
+      Authorization: `Bearer ${token}`,
+    }
+    console.log('createPet', body)
+    const url = `${environment.ENDPOINTS.USER.CREATE_PET}`
+
+    return this.http.post<PetResp>(url, body, { headers })
   }
 }

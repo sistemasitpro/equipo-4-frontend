@@ -1,4 +1,5 @@
 <div class="veterinaries-card-container">
+  <skeleton-card *ngIf="showSkeleton"></skeleton-card>
   <div
     class="veterinaries-card"
     *ngFor="let veterinary of getDisplayedVeterinaries()"

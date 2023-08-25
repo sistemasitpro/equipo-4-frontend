@@ -9,9 +9,11 @@
       </div>
     </div>
     <veterinaries-card
+      [showSkeleton]="showSkeleton"
       [veterinaries]="veterinaries"
-      [showPaginator]="showPaginator"
+      [showPaginator]="false"
     ></veterinaries-card>
+    <messages [message]="message" *ngIf="!showSkeleton && noInfo"></messages>
   </div>
   <!-- Footer fuera del contenedor -->
   <app-footer></app-footer>

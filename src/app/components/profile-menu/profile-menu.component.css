@@ -11,7 +11,6 @@
 .perfil-icon {
   font-size: 24px;
   margin-right: 8px;
-  cursor: pointer;
 }
 
 .perfil-menu-content {
@@ -31,6 +30,10 @@
     visibility 0s linear 0.3s;
   right: 0; /* Posicionar a la derecha */
   white-space: nowrap; /* Evitar saltos de línea */
+}
+
+.perfil-menu-content a {
+  cursor: pointer;
 }
 
 .perfil-menu:hover .perfil-menu-content {
