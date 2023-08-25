@@ -33,7 +33,7 @@ export class HomeComponent {
       this.showSkeleton = false
       this.noInfo = true
       this.veterinaryService.getVeterinaries().subscribe((response: any) => {
-        this.veterinaries = response.data
+        this.veterinaries = response
       })
     }, 700)
   }
